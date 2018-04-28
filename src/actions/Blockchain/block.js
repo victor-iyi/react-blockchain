@@ -3,16 +3,23 @@ import SHA256 from 'crypto-js/sha256';
 class Block {
 
   constructor (data, options = {}) {
+    // Data contained in block.
     this.data = data;
-    this.options = options;
 
-    /* TODO: Extract prevHash from options. */
-    this.prevHash = '';
+    // Hash of the previous block in the blockchain.
+    this.prevHash = options.prevHash || '';
+
+    // Hash of current block.
     this.hash = this.calculateHash();
   }
 
+  /**
+   * Calculate the hash of current block.
+   * 
+   * @returns {string} sha256 hash of current block.
+   */
   calculateHash() {
-    const message = JSON.stringify(this.data) + this.prevHash + JSON.stringify(this.options);
+    const message = JSON.stringify(this.data) + this.prevHash;
     return SHA256(message).toString();
   }
 
