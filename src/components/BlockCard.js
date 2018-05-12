@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class BlockCard extends Component {
   render() {
     return (
-      <div>
+      <div className="block-card">
         Block card.
       </div>
     );

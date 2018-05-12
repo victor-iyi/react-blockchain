@@ -18,11 +18,19 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# IntelliJ project files
+### IntelliJ project files
 .idea
 *.iml
 out
-gen### Node template
+gen
+
+
+### SCSS template
+.sass-cache
+*.map
+css-file
+
+### Node template
 
 # Logs
 logs
