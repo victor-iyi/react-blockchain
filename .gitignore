@@ -28,7 +28,7 @@ gen
 ### SCSS template
 .sass-cache
 *.map
-css-file
+
 
 ### Node template
 
