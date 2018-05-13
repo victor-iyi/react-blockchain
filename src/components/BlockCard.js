@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { englishNum } from '../actions/utils';
 
 const BlockCard = (props) =>
-  <div className="card block-card">
+  <div className={`card block-card ${!props.integrity ? '' : 'bg-danger'}`}>
     {/* Block header. */}
     <div className="card-header">
-      <h5 className="card-title">1st Block</h5>
+      <h5 className="card-title">{`${englishNum(1)} Block`}</h5>
     </div>
 
     {/* Block body. */}
     <div className="card-body">
-    <label for="block-id">Block ID</label>
+      {/* Block ID */}
       <div className="input-group mb-3">
-        <div className="input-group-prepend">
-          <span className="input-group-text" id="block-id">#</span>
-        </div>
-        <input type="text" className="form-control" placeholder="Block ID"
-          aria-label="Block ID" aria-describedby="block-id" />
+        <label for="block-id">Block ID: 1</label>
       </div>
       {/* Nonce */}
       <label for="nonce">Nonce</label>
@@ -27,19 +24,22 @@ const BlockCard = (props) =>
       {/* Data. */}
       <label for="data">Data</label>
       <div className="input-group mb-3">
-        <textarea className="form-control" id="data" placeholder="Data" aria-label="Data"></textarea>
+        <textarea className="form-control" id="data" placeholder="Data" aria-label="Data">
+          {props.data}
+        </textarea>
       </div>
+
       {/* Hash */}
       <label for="hash">Hash</label>
       <div className="input-group mb-3">
-        <input type="text" id="hash" className="form-control"
-          placeholder="Hash" aria-label="Hash" />
+        <input type="text" id="hash" className="form-control" readOnly
+          placeholder="Hash" value={props.hash} aria-label="Hash" />
       </div>
     </div>
 
     {/* Block footer. */}
     <div className="card-footer bg-transparent">
-      <button className="btn btn-primary">Mine</button>
+      <button className="btn btn-outline-secondary btn-lg btn-block">Mine</button>
     </div>
   </div>;
 
