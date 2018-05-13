@@ -1,62 +1,53 @@
 import React from 'react';
 import NavItem from './NavItem';
+import { NAV_LINKS } from '../../constants';
 
-const navs = [
-  { title: 'Hash', link: '' },
-  { title: 'Block', link: '' },
-  { title: 'Blockchain', link: '' },
-  { title: 'Distributed', link: '' },
-  { title: 'Tokens', link: '' },
-];
 
 const _renderNavs = () =>
   <ul className="navbar-nav">
-    {navs.map((value, index) => <NavItem key={index} {...value} />)}
+    {NAV_LINKS.map((value, index) => <NavItem key={index} {...value} />)}
   </ul>;
 
 
-const NavBar = props => {
-  return (
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About React Blockchain</h4>
-              <p class="text-muted">
-                React Blockchain as the name suggests, it's a demo of the popular Blockchain technology in ReactJS. This demonstrates concepts such as Block, Blockchain, Distributed Blockchain, Tokens and Cryptographic Hash function.
+const NavBar = props =>
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About React Blockchain</h4>
+            <p class="text-muted">
+              React Blockchain as the name suggests, it's a demo of the popular Blockchain technology in ReactJS. This demonstrates concepts such as Block, Blockchain, Distributed Blockchain, Tokens and Cryptographic Hash function.
               </p>
-              <nav className="navbar-expand-md navbar-dark bg-dark">
-                {/* Nav bar links. */}
-                <div>{_renderNavs()}</div>
-              </nav>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Useful resources</h4>
-              <ul class="list-unstyled">
-                <li><a href="https://en.wikipedia.org/wiki/Blockchain" class="text-white">Wikipedia</a></li>
-                <li><a href="https://medium.com/tag/blockchain" class="text-white">Medium</a></li>
-                <li><a href="https://github.com/farhan711/blockchain" class="text-white">GitHub</a></li>
-              </ul>
-            </div>
+            <nav className="navbar-expand-md navbar-dark bg-dark">
+              {/* Nav bar links. */}
+              <div>{_renderNavs()}</div>
+            </nav>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Useful resources</h4>
+            <ul class="list-unstyled">
+              <li><a href="https://en.wikipedia.org/wiki/Blockchain" class="text-white">Wikipedia</a></li>
+              <li><a href="https://medium.com/tag/blockchain" class="text-white">Medium</a></li>
+              <li><a href="https://github.com/farhan711/blockchain" class="text-white">GitHub</a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            <strong>React Blockchain</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarHeader" aria-controls="navbarHeader"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+      <div class="container d-flex justify-content-between">
+        <a href="" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+          <strong>React Blockchain</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarHeader" aria-controls="navbarHeader"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-    </header>
-  );
-};
+    </div>
+  </header>;
 
 export default NavBar;
