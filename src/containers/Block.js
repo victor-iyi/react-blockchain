@@ -14,18 +14,18 @@
  *   Copyright (c) 2018. Victor I. Afolabi. All rights reserved.
  **/
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 
 class Block extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
   }
 
   render() {
     return (
       <div>
-        Contains demo of a Block.
+        Block.
       </div>
     );
   }
