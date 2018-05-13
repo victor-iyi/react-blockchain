@@ -2,9 +2,9 @@ import React from 'react';
 import { englishNum } from '../actions/utils';
 
 const BlockCard = (props) =>
-  <div className={`card block-card ${!props.integrity ? '' : 'bg-danger'}`}>
+  <div className={`card block-card mb-4 ${!props.integrity ? 'border-secondary' : 'border-danger'}`}>
     {/* Block header. */}
-    <div className="card-header">
+    <div className="card-header bg-transparent">
       <h5 className="card-title">{`${englishNum(1)} Block`}</h5>
     </div>
 
@@ -45,7 +45,7 @@ const BlockCard = (props) =>
 
     {/* Block footer. */}
     <div className="card-footer bg-transparent">
-      <button className="btn btn-outline-secondary btn-lg btn-block">Mine</button>
+      <button className="btn btn-outline-secondary btn-lg">Mine</button>
     </div>
   </div>;
 
