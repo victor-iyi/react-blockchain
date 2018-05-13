@@ -1,8 +1,9 @@
 import { BLOCK } from '../constants/actions';
+import { Block } from '../actions/core';
 
-const inital_state = null;
+const inital_state = new Block('');
 
-const Block = (state = inital_state, action) => {
+const BlockReducer = (state = inital_state, action) => {
   switch (action.type) {
     /*
      * +—————————————————————————————————————————————————————————————————————————————————————+
@@ -12,7 +13,28 @@ const Block = (state = inital_state, action) => {
      * +—————————————————————————————————————————————————————————————————————————————————————+
      */
     case BLOCK.CREATE:
-      console.log(action);
+      return new Block(action.payload);
+
+    /*
+     * +—————————————————————————————————————————————————————————————————————————————————————+
+     * | +—————————————————————————————————————————————————————————————————————————————————+ |
+     * | | Update block data.
+     * | +—————————————————————————————————————————————————————————————————————————————————+ |
+     * +—————————————————————————————————————————————————————————————————————————————————————+
+     */
+    case BLOCK.UPDATE:
+
+      if (action.payload) {
+        // If there's a block. re-calculate the hash function.
+        let block = action.payload.block;
+
+        // Update data & lastly re-calculate hash.
+        block.data = action.payload.data;
+        block.hash = block.calculateHash();
+
+        return block;
+      }
+
       return state;
 
     /*
@@ -23,16 +45,6 @@ const Block = (state = inital_state, action) => {
      * +—————————————————————————————————————————————————————————————————————————————————————+
      */
     case BLOCK.MINE:
-      return state;
-
-    /*
-     * +—————————————————————————————————————————————————————————————————————————————————————+
-     * | +—————————————————————————————————————————————————————————————————————————————————+ |
-     * | | Update block data.
-     * | +—————————————————————————————————————————————————————————————————————————————————+ |
-     * +—————————————————————————————————————————————————————————————————————————————————————+
-     */
-    case BLOCK.UPDATE:
       return state;
 
     /*
@@ -60,4 +72,4 @@ const Block = (state = inital_state, action) => {
   }
 };
 
-export default Block;
+export default BlockReducer;

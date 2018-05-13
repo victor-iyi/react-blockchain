@@ -16,7 +16,7 @@ class Blockchain {
     const data = { name: 'Genesis block' };
     const options = { prevHash: '' };
 
-    return new Block(data, options = options);
+    return new Block(data, { options: options });
   }
 
 }

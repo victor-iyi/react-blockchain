@@ -8,6 +8,7 @@ class Block {
 
     // Hash of the previous block in the blockchain.
     this.prevHash = options.prevHash || '';
+    this.nonce = Math.floor(Math.random() * 1);
 
     // Hash of current block.
     this.hash = this.calculateHash();

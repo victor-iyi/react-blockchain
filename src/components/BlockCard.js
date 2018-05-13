@@ -12,34 +12,34 @@ const BlockCard = (props) =>
     <div className="card-body">
       {/* Block ID */}
       <div className="input-group mb-3">
-        <label for="block-id">Block ID: 1</label>
+        <label htmlFor="block-id">Block ID: 1</label>
       </div>
       {/* Nonce */}
-      <label for="nonce">Nonce</label>
+      <label htmlFor="nonce">Nonce</label>
       <div className="input-group mb-3">
         <input type="text" id="nonce" className="form-control"
-          placeholder="Nonce" aria-label="Nonce" />
+          value={props.nonce} placeholder="Nonce" aria-label="Nonce" />
       </div>
 
       {/* Data. */}
-      <label for="data">Data</label>
+      <label htmlFor="data">Data</label>
       <div className="input-group mb-3">
-        <textarea className="form-control" id="data" placeholder="Data" aria-label="Data">
-          {props.data}
+        <textarea onChange={e => props.updateData(e.target.value)} id="data" value={props.data}
+          className="form-control" placeholder="Data" aria-label="Data">
         </textarea>
       </div>
 
       {/* Hash */}
-      <label for="hash">Hash</label>
+      <label htmlFor="hash">Hash</label>
       <div className="input-group mb-3">
         <input type="text" id="hash" className="form-control" readOnly
           placeholder="Hash" value={props.hash} aria-label="Hash" />
       </div>
       {/* Previous Hash */}
-      <label for="hash">Previous Hash</label>
+      <label htmlFor="hash">Previous Hash</label>
       <div className="input-group mb-3">
         <input type="text" id="prev-hash" className="form-control" readOnly
-          placeholder="Previous hash" value={props.prev_has} aria-label="Previous hash" />
+          placeholder="Previous hash" value={props.prevHash} aria-label="Previous hash" />
       </div>
     </div>
 
