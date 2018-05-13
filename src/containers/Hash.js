@@ -6,8 +6,8 @@
  *   GitHub: https://github.com/victor-iyiola
  *
  * @project
- *   File: Distributed.jsx
- *   Created on 12 May, 2018 @ 8:38 PM.
+ *   File: Hash.jsx
+ *   Created on 12 May, 2018 @ 8:37 PM.
  *
  * @license
  *   MIT License
@@ -17,18 +17,15 @@
 import React, {Component} from 'react';
 
 
-class Distributed extends Component {
-  constructor(props) {
-    super(props);
-  }
+class Hash extends Component {
 
   render() {
     return (
       <div>
-        Contains demo of Distributed Blockchain.
+        Real time demo of cryptographic hash function.
       </div>
     );
   }
 }
 
-export default Distributed;
+export default Hash;

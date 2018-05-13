@@ -1,12 +1,12 @@
 import React from 'react';
-import BlockCard from './BlockCard';
+import { Block } from '../containers';
 import NavBar from './Nav/NavBar';
 
 
 const App = () =>
   <div>
     <NavBar />
-    <BlockCard />
+    <Block />
   </div>;
 
 export default App;

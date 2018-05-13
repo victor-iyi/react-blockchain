@@ -6,7 +6,7 @@
  *   GitHub: https://github.com/victor-iyiola
  *
  * @project
- *   File: Blockchain.jsx
+ *   File: Blockchain.js
  *   Created on 12 May, 2018 @ 8:38 PM.
  *
  * @license
@@ -18,9 +18,6 @@ import React, {Component} from 'react';
 
 
 class Blockchain extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (

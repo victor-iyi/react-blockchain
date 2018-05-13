@@ -35,6 +35,12 @@ const BlockCard = (props) =>
         <input type="text" id="hash" className="form-control" readOnly
           placeholder="Hash" value={props.hash} aria-label="Hash" />
       </div>
+      {/* Previous Hash */}
+      <label for="hash">Previous Hash</label>
+      <div className="input-group mb-3">
+        <input type="text" id="prev-hash" className="form-control" readOnly
+          placeholder="Previous hash" value={props.prev_has} aria-label="Previous hash" />
+      </div>
     </div>
 
     {/* Block footer. */}

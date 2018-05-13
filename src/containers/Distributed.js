@@ -6,8 +6,8 @@
  *   GitHub: https://github.com/victor-iyiola
  *
  * @project
- *   File: Tokens.jsx
- *   Created on 12 May, 2018 @ 8:39 PM.
+ *   File: Distributed.jsx
+ *   Created on 12 May, 2018 @ 8:38 PM.
  *
  * @license
  *   MIT License
@@ -17,18 +17,15 @@
 import React, {Component} from 'react';
 
 
-class Tokens extends Component {
-  constructor(props) {
-    super(props);
-  }
+class Distributed extends Component {
 
   render() {
     return (
       <div>
-        Contains demo of tokens.
+        Contains demo of Distributed Blockchain.
       </div>
     );
   }
 }
 
-export default Tokens;
+export default Distributed;

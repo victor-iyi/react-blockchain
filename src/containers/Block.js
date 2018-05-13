@@ -15,20 +15,21 @@
  **/
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
+import BlockCard from '../components/BlockCard';
 
 class Block extends Component {
-  constructor (props) {
-    super(props);
-  }
 
   render() {
     return (
       <div>
-        Block.
+        <BlockCard />
       </div>
     );
   }
 }
 
-export default Block;
+const mapStateToProps = (state) => ({ block: state.block });
+
+export default connect(mapStateToProps)(Block);

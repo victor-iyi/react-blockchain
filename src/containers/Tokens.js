@@ -6,8 +6,8 @@
  *   GitHub: https://github.com/victor-iyiola
  *
  * @project
- *   File: Hash.jsx
- *   Created on 12 May, 2018 @ 8:37 PM.
+ *   File: Tokens.jsx
+ *   Created on 12 May, 2018 @ 8:39 PM.
  *
  * @license
  *   MIT License
@@ -17,18 +17,15 @@
 import React, {Component} from 'react';
 
 
-class Hash extends Component {
-  constructor(props) {
-    super(props);
-  }
+class Tokens extends Component {
 
   render() {
     return (
       <div>
-        Real time demo of cryptographic hash function.
+        Contains demo of tokens.
       </div>
     );
   }
 }
 
-export default Hash;
+export default Tokens;
