@@ -1,5 +1,6 @@
 # React Blockchain
 
+A Blockchain implementation in JavaScript using the React Library.
 
 ## Table of Contents
 
