@@ -1,10 +1,11 @@
 import React from 'react';
 import BlockCard from './BlockCard';
+import NavBar from './Nav/NavBar';
 
 
 const App = () =>
   <div>
-    <h1>React Blockchain.</h1>
+    <NavBar />
     <BlockCard />
   </div>;
 
